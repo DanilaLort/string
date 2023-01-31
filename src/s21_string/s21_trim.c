@@ -1,4 +1,4 @@
-#include "s21_string.h"
+#include "../s21_string.h"
 
 void s21_find_index_start(const char *src, const char *trim_chars, s21_size_t *pointer_start) {
 	s21_size_t i = 0;
@@ -36,12 +36,12 @@ void s21_find_index_end(const char *src, const char *trim_chars, s21_size_t *poi
 	}
 }
 
-char *s21_strcpy_by_index(const char *src, int index_start, int index_end) {
+char *s21_strcpy_by_index(const char *src, s21_size_t index_start, s21_size_t index_end) {
 	char *answer = (char *)s21_NULL;
 	if (index_start <= index_end + 1) {
 		answer = (char *)malloc(index_end - index_start + 2);
 		if (answer) {
-			for(int i = 0; i < index_end - index_start + 1; i++) {
+			for(s21_size_t i = 0; i < index_end - index_start + 1; i++) {
 				answer[i] = src[i + index_start];
 			}
 			answer[index_end - index_start + 1] = '\0';

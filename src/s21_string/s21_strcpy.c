@@ -1,4 +1,4 @@
-#include "s21_string.h"
+#include "../s21_string.h"
 
 char *s21_strcpy(char *dest, const char *src) {
 	char *answer = (char *)s21_NULL;
@@ -12,10 +12,10 @@ char *s21_strcpy(char *dest, const char *src) {
 			temp[i] = '\0';
 			answer = dest;
 			i = 0;
-			for (; i < s21_strlen(src); i++) {
+			for(; i < s21_strlen(src); i++) {
 				dest[i] = temp[i];
 			}
-			for (; i < s21_strlen(dest); i++);
+			for(; i < s21_strlen(dest); i++);
 			dest[i] = '\0';
 			free(temp);
 		}

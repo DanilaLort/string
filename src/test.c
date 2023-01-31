@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "includes/s21_string.h"
+#include "includes/../s21_string.h"
+#include <string.h>
 
 int main(void)
 {

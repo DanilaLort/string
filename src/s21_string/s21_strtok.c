@@ -1,4 +1,4 @@
-#include "s21_string.h"
+#include "../s21_string.h"
 
 char *s21_strtok(char *str, const char *delim) {
 	static char* pointer;
@@ -13,7 +13,7 @@ char *s21_strtok(char *str, const char *delim) {
 		s21_size_t i = 0;
 		s21_size_t j = 0;
 		int flag = -1;
-		for(str, j; *str && answer && str; str++, j++) {
+		for(; *str && answer && str; str++, j++) {
 			for(i = 0; i < s21_strlen(delim); i++) {
 				if(*str == delim[i]) {
 					*str = '\0';

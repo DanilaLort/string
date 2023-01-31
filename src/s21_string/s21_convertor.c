@@ -1,4 +1,4 @@
-#include "s21_string.h"
+#include "../s21_string.h"
 
 void *s21_convertor(const char *str, int funccmp1 (int), int funccmp2 (int), int decision (int)) {
 	char *answer = (char *)s21_NULL;

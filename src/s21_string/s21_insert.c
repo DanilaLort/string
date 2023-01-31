@@ -1,4 +1,4 @@
-#include "s21_string.h"
+#include "../s21_string.h"
 
 void *s21_insert(const char *src, const char *str, size_t start_index) {
 	char *answer = (char *)s21_NULL;
@@ -9,7 +9,7 @@ void *s21_insert(const char *src, const char *str, size_t start_index) {
 		answer = (char *)malloc(lanswer + 1);
 		if (answer) {
 			s21_size_t i = 0;
-			for(i = 0; i < start_index; i++) {
+			for(; i < start_index; i++) {
 				answer[i] = src[i];
 			}
 			for(i = 0; i < s21_strlen(str); i++) {

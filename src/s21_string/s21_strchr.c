@@ -1,17 +1,11 @@
-#include "s21_string.h"
+#include "../s21_string.h"
 
-char	*s21_strchr(const char *str, int ch)
-{
-	int			i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (str[i] == (char)ch)
-			return ((char *)str + i);
-		i++;
+char *s21_strchr(const char *str, int c) {
+	char *answer = (char *)s21_NULL;
+	for (; *str; (str++)) {
+		if (*str == c && answer == (char *)s21_NULL) {
+			answer = (char *)str;
+		}
 	}
-	if (str[i] == (char)ch)
-		return ((char *)str + i);
-	return (NULL);
+	return answer;
 }
